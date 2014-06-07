@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.krashnburnz.caloriecalc.app.MainActivity"
+    android:background="@drawable/fitnessnewnomid"
+    android:onClick="dismissKeyboard">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Calorie Calculator"
+        android:id="@+id/textViewCalCalc"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Exercise Time:"
+        android:id="@+id/textViewTime"
+        android:layout_below="@+id/textViewCalCalc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextTime"
+        android:layout_below="@+id/textViewTime"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:hint="minutes"
+        android:layout_alignLeft="@+id/textViewTime"
+        android:layout_alignStart="@+id/textViewTime"
+        android:layout_alignRight="@+id/textViewTime"
+        android:layout_alignEnd="@+id/textViewTime" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Body Weight:"
+        android:id="@+id/textViewWeight"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/editTextTime"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextWeight"
+        android:layout_below="@+id/textViewWeight"
+        android:layout_alignLeft="@+id/editTextTime"
+        android:layout_alignStart="@+id/editTextTime"
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@+id/editTextTime"
+        android:layout_alignEnd="@+id/editTextTime"
+        android:textAlignment="center"
+        android:hint="pounds" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@anim/blue_button"
+        android:layout_height="wrap_content"
+        android:text="Medium"
+        android:id="@+id/buttonMedium"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/editTextWeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@anim/blue_button"
+        android:text=" Fast "
+        android:id="@+id/buttonFast"
+        android:layout_alignTop="@+id/buttonMedium"
+        android:layout_toRightOf="@+id/buttonMedium"
+        android:clickable="false"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@anim/red_button"
+        android:layout_height="wrap_content"
+        android:text=" Slow "
+        android:id="@+id/buttonSlow"
+        android:layout_alignTop="@+id/buttonMedium"
+        android:layout_toLeftOf="@+id/buttonMedium"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@anim/blue_button"
+        android:text="Running"
+        android:id="@+id/buttonRunning"
+        android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/buttonMedium"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@anim/blue_button"
+        android:text="Cycling"
+        android:id="@+id/buttonCycling"
+        android:layout_alignTop="@+id/buttonRunning"
+        android:layout_toRightOf="@+id/buttonRunning"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@anim/red_button"
+        android:text="Walking"
+        android:id="@+id/buttonWalking"
+        android:layout_alignTop="@+id/buttonRunning"
+        android:layout_toLeftOf="@+id/buttonRunning"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:background="@anim/red_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/buttonCalc"
+        android:layout_below="@+id/buttonRunning"
+        android:layout_marginTop="16dp"
+        android:layout_alignLeft="@+id/textViewCalCalc"
+        android:layout_alignStart="@+id/textViewCalCalc"
+        android:layout_alignRight="@+id/textViewCalCalc"
+        android:layout_alignEnd="@+id/textViewCalCalc"
+        android:textColor="#FFFFFF" />
+
+
+</RelativeLayout>
